@@ -1,0 +1,110 @@
+{
+  "couple": {
+    "name1": "Vandesh",
+    "name2": "Komal",
+    "displayName": "Vandesh & Komal",
+    "monogram": "V & K",
+    "sealMonogram": "V&K"
+  },
+  "wedding": {
+    "date": "2026-12-13",
+    "displayDate": "DECEMBER 13, 2026",
+    "day": "SUNDAY",
+    "countdownTime": "17:46",
+    "timezone": "Asia/Kolkata"
+  },
+  "venue": {
+    "name": "Monalisa Lawn And Banquet",
+    "city": "Thane, Maharashtra",
+    "address": "Near Unnathi Greens, Haware City Road, Ghodbunder Rd, Kasarvadavali, Thane, Maharashtra 400615",
+    "shortLocation": "Thane, Maharashtra",
+    "mapsUrl": "https://share.google/17GaLzqhOJ2UYp91D"
+  },
+  "events": [
+        {
+      "id": "mehendi",
+      "name": "MEHENDI",
+      "date": "",
+      "displayDate": "DATE TO BE CONFIRMED",
+      "time": "TIME TO BE CONFIRMED",
+      "location": "LOCATION TO BE CONFIRMED",
+      "mapsUrl": "",
+      "description": ""
+    },
+    {
+      "id": "haldi",
+      "name": "HALDI",
+      "date": "2026-12-11",
+      "displayDate": "DECEMBER 11, 2026",
+      "time": "6:00 PM onwards",
+      "location": "[HALDI VENUE — TO BE CONFIRMED]",
+      "mapsUrl": "https://share.google/reVQZUjgEisk0RmT4",
+      "description": ""
+    },
+    {
+      "id": "punya-vachan",
+      "name": "PUNYA VACHAN",
+      "date": "",
+      "displayDate": "DATE TO BE CONFIRMED",
+      "time": "TIME TO BE CONFIRMED",
+      "location": "LOCATION TO BE CONFIRMED",
+      "mapsUrl": "",
+      "description": ""
+    },
+    {
+      "id": "wedding-ceremony",
+      "name": "WEDDING CEREMONY",
+      "date": "2026-12-13",
+      "displayDate": "DECEMBER 13, 2026",
+      "time": "5:46 PM",
+      "location": "Monalisa Lawn And Banquet",
+      "mapsUrl": "https://share.google/17GaLzqhOJ2UYp91D",
+      "description": ""
+    },
+    {
+      "id": "reception",
+      "name": "RECEPTION",
+      "date": "2026-12-13",
+      "displayDate": "DECEMBER 13, 2026",
+      "time": "7:00 PM onwards",
+      "location": "Monalisa Lawn And Banquet",
+      "mapsUrl": "https://share.google/17GaLzqhOJ2UYp91D",
+      "description": ""
+    }
+  ],
+  "rsvp": {
+    "deadline": "2026-12-10",
+    "displayDeadline": "DECEMBER 10, 2026"
+  },
+  "integrations": {
+    "googleSheets": {
+      "enabled": true,
+      "webAppUrl": "https://script.google.com/macros/s/AKfycbx0qtke6DffljiTt4pTn4d46w0CP32YSioU2svjAyZB2vFJ0VqkKdDUYxCPcs-4dlfHAQ/exec"
+    }
+  },
+  "hashtag": "[ADD FINAL HASHTAG]",
+  "music": {
+    "enabled": true,
+    "file": "audio/ed-sheeran-perfect.mp3",
+    "title": "PERFECT",
+    "artist": "ED SHEERAN"
+  },
+  "story": {
+    "sectionTitle": "OUR LOVE STORY",
+    "eyebrow": "CHAPTER I",
+    "body": "What began with our first dinner together at Gustoso soon became the beginning of something truly special. From that first evening to the countless moments we’ve shared since, we discovered not just a partner, but a best friend, a confidant, and someone with whom we could imagine a lifetime.Through laughter, little adventures, shared dreams, and all the moments in between, our journey brought us to where we are today — ready to begin our forever together.",
+    "location": "",
+    "year": ""
+  },
+  "images": {
+    "hero": "images/hero/wedding-card-bg.jpg",
+    "story": "images/story/couple-portrait.jpg",
+    "venue": "images/venue/venue-exterior.jpeg",
+    "footer": "images/footer/couple-water.jpg"
+  },
+  "socialPreview": {
+    "title": "Vandesh & Komal",
+    "subtitle": "Our Wedding",
+    "date": "13 DECEMBER 2026"
+  }
+}

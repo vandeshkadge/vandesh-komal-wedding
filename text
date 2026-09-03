@@ -1,0 +1,108 @@
+1. Haldi location
+
+Where is the Haldi on December 11 at 6 PM onwards?
+date
+time
+location
+
+2. Is there a Mehendi?
+date
+time
+location 
+
+
+3. Is there a wedding reception only, or any other event?
+Punya Vachan
+Wedding Ceremony
+Reception
+
+
+4. Love Story
+
+Do you actually want the Our Love Story section?
+ changing it to something more culturally relevant
+
+5. Hero card wording
+
+The current hero card says:
+
+SAVE THE DATE
+An Invitation to
+Our Wedding
+
+Do you want to keep this structure?
+keep it same
+
+
+6. RSVP information
+
+The current RSVP form asks for:
+
+Guest name
+Attending/not attending
+Number of attendees
+
+
+And potentially remove email, dietary restrictions and song request unless you genuinely need them.
+
+7. RSVP submission
+
+Right now the form doesn't actually send the RSVP anywhere. It simply displays a success message in the browser.
+
+Do you want GitHub to eventually connect this to:
+B. Supabase
+
+
+8. Google Maps
+
+Do you want me to use a Google Maps link for Monalisa Lawn And Banquet?
+-https://share.google/17GaLzqhOJ2UYp91D
+If yes, send me the Google Maps link you normally use. This is preferable to having the coding agent guess the location.
+
+9. Hashtag
+
+#MAKE A HANSTAG looks like a placeholder rather than the final hashtag.
+
+What is the actual hashtag?
+
+For example:
+
+#VandeshWedsKomal
+
+or something more creative.
+
+10. Music
+
+Do you want the top vinyl player to actually play a song?
+
+If yes, eventually we'll need:
+
+music/
+└── wedding-song.mp3
+
+and the song name/artist displayed in the pill.
+
+11. Footer photo
+
+You requested:
+
+images/footer/couple-water.jpg
+
+Do you actually have a water/romantic couple photograph for this, or should we rename this to something more generic like couple-final.jpg?
+yes
+One more important thing
+
+Your venue address is quite long:
+
+Monalisa Lawn And Banquet, Near Unnathi Greens, Haware City Road, Ghodbunder Rd, Kasarvadavali, Thane, Maharashtra 400615
+
+I recommend not putting the entire address in the primary venue heading. Keep the visual hierarchy as:
+
+MONALISA LAWN AND BANQUET
+Thane, Maharashtra
+
+Near Unnathi Greens, Haware City Road,
+Ghodbunder Rd, Kasarvadavali,
+Thane, Maharashtra 400615
+
+ok 
