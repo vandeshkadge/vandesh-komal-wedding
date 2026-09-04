@@ -1,6 +1,6 @@
 # Wedding Invitation Editing Guide
 
-For normal wedding updates, edit only `wedding-data.json`.
+For normal wedding updates, edit only `public/wedding-data.json`.
 
 After editing the JSON, refresh the invitation in your browser. Keep the local server running because the page loads the JSON file over HTTP.
 
@@ -75,7 +75,7 @@ For an event that is not confirmed, leave `date` empty and use clear configured 
 - Story title: edit `story.sectionTitle`.
 - Story label: edit `story.eyebrow`.
 - Footer hashtag: edit `hashtag`.
-- Image paths: edit the four values under `images`, then replace the matching local files while keeping their filenames.
+- Image paths: edit the four values under `images`, then replace the matching files under `public/images/` while keeping their filenames.
 
 ## Google Sheets RSVP
 
