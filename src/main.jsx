@@ -4,6 +4,7 @@ import { AnimatePresence, motion, useInView } from 'motion/react';
 import { Analytics } from '@vercel/analytics/react';
 import './styles.css';
 import './music-controls.css';
+import './mobile-interactions.css';
 
 const fadeUp = { hidden: { opacity: 0, y: 24 }, visible: { opacity: 1, y: 0 } };
 const transition = { duration: 0.7, ease: [0.22, 1, 0.36, 1] };

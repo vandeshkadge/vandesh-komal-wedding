@@ -1,0 +1,47 @@
+/* Touch devices do not have a persistent hover state, so give key visual
+   elements quiet motion and clear press feedback instead. */
+@media (hover: none) and (pointer: coarse) {
+  .image-frame {
+    animation: mobile-image-breathe 7s ease-in-out infinite;
+    will-change: transform;
+  }
+
+  .hero-image {
+    animation-duration: 8s;
+  }
+
+  .monogram {
+    animation: mobile-monogram-glow 4s ease-in-out infinite;
+  }
+
+  .image-frame:active {
+    transform: scale(.985);
+  }
+
+  .action-row a:active,
+  .action-row button:active,
+  .calendar-day:active,
+  .icon-button:active,
+  .open-button:active,
+  .submit:active {
+    transform: scale(.96);
+    transition: transform .15s ease;
+  }
+}
+
+@keyframes mobile-image-breathe {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.018); }
+}
+
+@keyframes mobile-monogram-glow {
+  0%, 100% { box-shadow: 0 0 0 0 #c5a88000; }
+  50% { box-shadow: 0 0 0 7px #c5a88022; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .image-frame,
+  .monogram {
+    animation: none;
+  }
+}
