@@ -1,0 +1,16 @@
+.play-icon.pause-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  height: 13px;
+  vertical-align: middle;
+}
+
+.pause-icon i {
+  display: block;
+  width: 3px;
+  height: 12px;
+  border-radius: 1px;
+  background: currentColor;
+}
