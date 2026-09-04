@@ -15,14 +15,18 @@
   border-left: 9px solid currentColor;
 }
 
-.play-icon.pause-icon {
-  display: inline-flex;
+.pause-icon {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 3px;
   height: 13px;
   vertical-align: middle;
+}
+
+.venue-map-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
 }
 
 .timeline-map-link {
@@ -58,12 +62,4 @@
   content: '';
   transform: rotate(-45deg);
   transform-origin: right center;
-}
-
-.pause-icon i {
-  display: block;
-  width: 3px;
-  height: 12px;
-  border-radius: 1px;
-  background: currentColor;
 }
