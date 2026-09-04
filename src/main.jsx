@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { createRoot } from 'react-dom/client';
 import { AnimatePresence, motion, useInView } from 'motion/react';
+import { Analytics } from '@vercel/analytics/react';
 import './styles.css';
 import './music-controls.css';
 
@@ -108,4 +109,4 @@ function App() {
   </div>;
 }
 
-createRoot(document.getElementById('root')).render(<App />);
+createRoot(document.getElementById('root')).render(<><App /><Analytics /></>);

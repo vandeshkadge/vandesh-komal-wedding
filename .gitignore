@@ -1,0 +1,9 @@
+# Installed dependencies and generated build output
+node_modules/
+dist/
+
+# Local environment files and logs
+.env
+.env.*
+!.env.example
+*.log
