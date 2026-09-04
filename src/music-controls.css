@@ -1,10 +1,63 @@
+.icon-button {
+  -webkit-appearance: none;
+  appearance: none;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.play-icon {
+  display: block;
+  width: 0;
+  height: 0;
+  margin-left: 2px;
+  border-top: 6px solid transparent;
+  border-bottom: 6px solid transparent;
+  border-left: 9px solid currentColor;
+}
+
 .play-icon.pause-icon {
+  display: inline-flex;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 3px;
   height: 13px;
   vertical-align: middle;
+}
+
+.timeline-map-link {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.map-arrow {
+  position: relative;
+  display: inline-block;
+  width: 11px;
+  height: 11px;
+  flex: 0 0 11px;
+}
+
+.map-arrow::before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 7px;
+  height: 7px;
+  border-top: 1px solid currentColor;
+  border-right: 1px solid currentColor;
+  content: '';
+}
+
+.map-arrow::after {
+  position: absolute;
+  top: 6px;
+  right: 1px;
+  width: 10px;
+  height: 1px;
+  background: currentColor;
+  content: '';
+  transform: rotate(-45deg);
+  transform-origin: right center;
 }
 
 .pause-icon i {
