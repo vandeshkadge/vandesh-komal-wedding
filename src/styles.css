@@ -440,7 +440,7 @@
 
 /* The source JPEG is portrait-oriented; retain its full composition. */
 .story-image {
-  width: min(100%, 300px);
+  width: min(100%, 200px);
   height: auto;
   aspect-ratio: 2 / 3;
 }
