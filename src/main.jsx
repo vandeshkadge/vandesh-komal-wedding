@@ -56,33 +56,36 @@ function App() {
   const [guestCount, setGuestCount] = useState(2);
   const [rsvpSent, setRsvpSent] = useState(false);
   const audioRef = useRef(null);
-  const touchStart = useRef(0);
   const userPausedMusic = useRef(false);
 
   useEffect(() => { fetch('/wedding-data.json').then(response => response.json()).then(nextData => { setData(nextData); document.title = `${nextData.couple.displayName} — Wedding Invitation`; const previewImage = new URL(nextData.socialPreview.image, document.baseURI).href; document.querySelector('meta[property="og:title"]')?.setAttribute('content', nextData.socialPreview.title); document.querySelector('meta[property="og:description"]')?.setAttribute('content', nextData.socialPreview.description); document.querySelector('meta[property="og:image"]')?.setAttribute('content', previewImage); document.querySelector('meta[name="twitter:title"]')?.setAttribute('content', nextData.socialPreview.title); document.querySelector('meta[name="twitter:description"]')?.setAttribute('content', nextData.socialPreview.description); document.querySelector('meta[name="twitter:image"]')?.setAttribute('content', previewImage); }); }, []);
   useEffect(() => { if (!data) return; const timer = setInterval(() => setData(current => ({ ...current, _now: Date.now() })), 1000); return () => clearInterval(timer); }, [data]);
-  useEffect(() => { if (!opened) return; const timer = window.setTimeout(() => document.querySelector('#introduction')?.scrollIntoView({ behavior: 'smooth', block: 'start' }), 180); return () => window.clearTimeout(timer); }, [opened]);
   useEffect(() => {
-    if (!opened) return undefined;
-    const getSections = () => [...document.querySelectorAll('.full-section')].filter(section => getComputedStyle(section).display !== 'none');
-    let locked = false;
-    const move = direction => {
-      if (locked) return;
-      const sections = getSections();
-      const current = Math.round(window.scrollY / window.innerHeight);
-      const next = Math.max(0, Math.min(sections.length - 1, current + direction));
-      if (next === current) return;
-      locked = true;
-      sections[next]?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      window.setTimeout(() => { locked = false; }, 850);
+    if (!opened || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return undefined;
+
+    const sections = [...document.querySelectorAll('.full-section')];
+    let nextSection = 1;
+    let timer;
+    let cancelled = false;
+    const userEvents = ['wheel', 'touchmove', 'keydown'];
+
+    const stop = () => {
+      cancelled = true;
+      window.clearTimeout(timer);
+      window.scrollTo({ top: window.scrollY, behavior: 'auto' });
+      userEvents.forEach(eventName => window.removeEventListener(eventName, stop));
     };
-    const onWheel = event => { if (Math.abs(event.deltaY) > 18) { event.preventDefault(); move(event.deltaY > 0 ? 1 : -1); } };
-    const onTouchStart = event => { touchStart.current = event.touches[0].clientY; };
-    const onTouchEnd = event => { const delta = touchStart.current - event.changedTouches[0].clientY; if (Math.abs(delta) > 45) move(delta > 0 ? 1 : -1); };
-    window.addEventListener('wheel', onWheel, { passive: false });
-    window.addEventListener('touchstart', onTouchStart, { passive: true });
-    window.addEventListener('touchend', onTouchEnd, { passive: true });
-    return () => { window.removeEventListener('wheel', onWheel); window.removeEventListener('touchstart', onTouchStart); window.removeEventListener('touchend', onTouchEnd); };
+    const advance = () => {
+      if (cancelled || nextSection >= sections.length) return stop();
+      sections[nextSection]?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      nextSection += 1;
+      // One second to glide, then three seconds for the section to be read.
+      timer = window.setTimeout(advance, 4000);
+    };
+
+    timer = window.setTimeout(advance, 3000);
+    userEvents.forEach(eventName => window.addEventListener(eventName, stop, { passive: true }));
+    return stop;
   }, [opened]);
 
   if (!data) return <div className="loading">Preparing your invitation<span>·</span><span>·</span><span>·</span></div>;
