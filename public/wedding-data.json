@@ -21,23 +21,13 @@
     "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Monalisa%20Lawn%20And%20Banquet%2C%20Near%20Unnathi%20Greens%2C%20Haware%20City%20Road%2C%20Ghodbunder%20Rd%2C%20Kasarvadavali%2C%20Thane%2C%20Maharashtra%20400615"
   },
   "events": [
-        {
-      "id": "mehendi",
-      "name": "KOMAL'S MEHENDI",
-      "date": "",
-      "displayDate": "DATE TO BE CONFIRMED",
-      "time": "TIME TO BE CONFIRMED",
-      "location": "LOCATION TO BE CONFIRMED",
-      "mapsUrl": "",
-      "description": ""
-    },
     {
       "id": "haldi",
       "name": "HALDI",
       "date": "2026-12-11",
       "displayDate": "DECEMBER 11, 2026",
       "time": "6:00 PM onwards",
-      "location": "VOWS BANQUET, DADAR",
+      "location": "VOWS BANQUET, OPP SHREE SIDDHIVINAYAK TEMPLE",
       "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Vows%20Banquet%2C%20Swatantryaveer%20Savarkar%20Rd%2C%20Prabhadevi%2C%20Mumbai%2C%20Maharashtra%20400025",
       "description": ""
     },
@@ -78,16 +68,15 @@
   },
   "integrations": {
     "googleSheets": {
-      "enabled": true,
-      "webAppUrl": "https://script.google.com/macros/s/AKfycbx0qtke6DffljiTt4pTn4d46w0CP32YSioU2svjAyZB2vFJ0VqkKdDUYxCPcs-4dlfHAQ/exec"
+      "enabled": false,
+      "webAppUrl": "[ADD GOOGLE SHEETS WEB APP URL]"
     }
   },
-  "hashtag": "[ADD FINAL HASHTAG]",
   "music": {
     "enabled": true,
-    "file": "audio/ed-sheeran-perfect.mp3",
-    "title": "PERFECT",
-    "artist": "ED SHEERAN"
+    "file": "audio/Elvis Presley - Can't Help Falling in Love (Lyrics).mp3",
+    "title": "Can't Help Falling in Love",
+    "artist": "ELVIS PRESLEY"
   },
   "story": {
     "sectionTitle": "OUR LOVE STORY",
@@ -98,15 +87,15 @@
   },
   "images": {
     "hero": "images/hero/wedding-card-bg.jpg",
-    "story": "images/story/couple-portrait.jpg",
+    "story": "images/story/couple-portrait.jpeg",
     "venue": "images/venue/venue-exterior.jpeg",
-    "footer": "images/footer/couple-water.jpg"
+    "footer": "images/footer/couple-water.jpeg"
   },
   "socialPreview": {
     "title": "Komal & Vandesh — Wedding Invitation",
     "subtitle": "Our Wedding",
     "date": "13 DECEMBER 2026",
-    "description": "You are warmly invited to celebrate with Vandesh & Komal.",
+    "description": "A date to remember.\nA love to celebrate.\nA forever to begin.",
     "image": "images/hero/wedding-card-bg.jpg"
   }
 }
