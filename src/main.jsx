@@ -79,8 +79,8 @@ function App() {
       if (cancelled || nextSection >= sections.length) return stop();
       sections[nextSection]?.scrollIntoView({ behavior: 'smooth', block: 'start' });
       nextSection += 1;
-      // One second to glide, then three seconds for the section to be read.
-      timer = window.setTimeout(advance, 4000);
+      // One second to glide, then four seconds for the section to be read.
+      timer = window.setTimeout(advance, 5000);
     };
 
     timer = window.setTimeout(advance, 3000);

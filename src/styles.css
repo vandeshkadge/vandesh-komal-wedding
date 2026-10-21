@@ -473,3 +473,50 @@
 @media (prefers-reduced-motion: reduce) {
   .invitation-pages .full-section:not(.footer)::after { animation: none; }
 }
+
+/* Keep the cover call-to-action and its arrow black. */
+.open-button,
+.open-button .open-arrow {
+  color: #000;
+}
+.open-button {
+  position: relative;
+  box-shadow: 0 10px 22px #3c302040, 0 0 0 4px #b38e5d1f;
+}
+.open-button::after {
+  content: '';
+  position: absolute;
+  inset: -7px;
+  border: 1px solid #b38e5d;
+  border-radius: inherit;
+  pointer-events: none;
+  animation: invitation-button-ring 1.8s ease-out infinite;
+}
+@keyframes invitation-button-ring {
+  0% { opacity: .8; transform: scale(.94); }
+  75%, 100% { opacity: 0; transform: scale(1.22); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .open-button::after { animation: none; }
+}
+
+/* Give the closing sentiment a more intentional, celebratory finish. */
+.footer p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: 10px auto 0;
+  color: #795a2c;
+  font: 600 11px Cinzel, serif;
+  letter-spacing: .18em;
+  line-height: 1.65;
+  text-shadow: 0 1px 0 #fff;
+}
+.footer p::before,
+.footer p::after {
+  content: '✦';
+  color: #b38e5d;
+  font: 11px serif;
+  text-shadow: none;
+}
